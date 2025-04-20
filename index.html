@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="sidebar"></div>
+
   <header>
     <div class="logo">⧉</div>
     <nav>
@@ -22,8 +24,24 @@
     <section class="hero">
       <h1>Smart Digital Agency<br>For Your Business<br>To Succeed</h1>
       <p>Agency that build many amazing product to boost your business to next level.</p>
+
+      <svg viewBox="0 0 200 200" width="120" height="120">
+        <defs>
+          <path id="circle" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"/>
+        </defs>
+        <text>
+          <textPath href="#circle" startOffset="0%">
+            Subscribe to view collection • Subscribe to view collection •
+          </textPath>
+        </text>
+      </svg>
+
+      <div class="portrait">
+        <img src="https://cdn.pixabay.com/photo/2020/10/04/06/34/black-woman-5624390_1280.jpg" alt="person">
+      </div>
+
       <div class="metrics">
-        <div class="funding">
+        <div class="funding glass">
           <div class="progress-circle">
             <span>75%</span>
           </div>
@@ -32,17 +50,19 @@
             <p>263 Contributions in the last year</p>
           </div>
         </div>
-        <div class="views">
+        <div class="views glass">
           <h2>4.875 ♥</h2>
           <p>Project Views last year</p>
         </div>
-        <div class="clients">
-          <h2>5000+</h2>
-          <p>Total Clients</p>
-          <div class="avatars">
-            <img src="https://i.pravatar.cc/30?img=1" />
-            <img src="https://i.pravatar.cc/30?img=2" />
-            <span>+2</span>
+        <div class="clients-wrapper">
+          <div class="clients glass">
+            <h2>5000+</h2>
+            <p>Total Clients</p>
+            <div class="avatars">
+              <img src="https://i.pravatar.cc/30?img=1" />
+              <img src="https://i.pravatar.cc/30?img=2" />
+              <span>+2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -54,11 +74,8 @@
         <button>Search Engine OPT</button>
         <button>Software Development for Business</button>
       </div>
-
-      <div class="hero-image">
-        <img src="https://cdn.pixabay.com/photo/2017/06/20/19/22/girl-2427646_960_720.jpg" alt="Hero Person">
-      </div>
     </section>
   </main>
 </body>
 </html>
+
