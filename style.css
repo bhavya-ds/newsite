@@ -9,13 +9,25 @@ body {
   background-color: #fddede;
   color: #111;
   padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: #111;
+  z-index: 100;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 40px 50px;
 }
 
 .logo {
@@ -36,12 +48,14 @@ nav a {
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .hero {
   max-width: 1100px;
   margin: 0 auto;
   text-align: left;
+  position: relative;
 }
 
 .hero h1 {
@@ -56,17 +70,50 @@ nav a {
   color: #333;
 }
 
+svg {
+  fill: black;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.portrait {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.portrait img {
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
 .metrics {
   display: flex;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-top: 320px;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .funding, .views, .clients {
-  background: white;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .progress-circle {
@@ -85,6 +132,7 @@ nav a {
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-top: 10px;
 }
 
 .avatars img {
@@ -99,10 +147,19 @@ nav a {
   padding: 5px 10px;
 }
 
+.clients-wrapper {
+  transform: rotate(-10deg);
+  background: #f8bebe;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 40px;
 }
 
 .tags button {
@@ -116,10 +173,4 @@ nav a {
 .tags .active {
   background: black;
   color: white;
-}
-
-.hero-image img {
-  margin-top: 40px;
-  width: 300px;
-  border-radius: 50px;
 }
